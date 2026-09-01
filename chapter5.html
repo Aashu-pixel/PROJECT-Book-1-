@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chapter 5 - Programming Concepts and Logics</title>
+</head>
+
+<body>
+    <center>
+        <h1><font>Chapter 5: Programming Concepts & Logics</font></h1>
+    </center>
+
+    <hr>
+
+    <h2>Introduction</h2>
+
+    <p>
+        Programming is one of the most important areas of computer science.
+        A computer can perform different tasks only when it is given proper
+        instructions. These instructions are written in a programming language
+        in the form of a program.
+    </p>
+
+    <p>
+        A programmer must understand programming concepts, problem-solving
+        techniques, program design tools, and programming languages to develop
+        a correct and efficient program.
+    </p>
+
+    <p>
+        This chapter introduces programming languages, translators, programming
+        errors, control structures, algorithms, flowcharts, pseudocode, number
+        and character representation systems, and the basic concepts of the C
+        programming language.
+    </p>
+
+    <hr>
+
+    <h2>5.1 Programming Concept</h2>
+
+    <p>
+        Programming is the process of designing, writing, testing, debugging,
+        and maintaining a set of instructions that tells a computer how to
+        perform a particular task.
+    </p>
+
+    <p>
+        A set of instructions written in a programming language to solve a
+        problem is called a <b>computer program</b>.
+    </p>
+
+    <p>
+        The person who writes computer programs is called a <b>programmer</b>.
+    </p>
+
+    <h3>General Process of Programming</h3>
+
+    <ol>
+        <li>Understanding the problem</li>
+        <li>Designing a solution</li>
+        <li>Preparing an algorithm</li>
+        <li>Drawing a flowchart or writing pseudocode</li>
+        <li>Writing the program</li>
+        <li>Compiling or interpreting the program</li>
+        <li>Testing the program</li>
+        <li>Debugging errors</li>
+        <li>Maintaining the program</li>
+    </ol>
+
+    <hr>
+
+    <h3>5.1.1 Introduction to Programming Languages</h3>
+
+    <p>
+        A <b>programming language</b> is a formal language used to write
+        instructions that can be understood and executed by a computer.
+    </p>
+
+    <p>
+        Computers understand machine language, which consists mainly of binary
+        digits 0 and 1. However, writing programs directly in binary is
+        difficult for humans. Therefore, different programming languages have
+        been developed to make programming easier.
+    </p>
+
+    <h4>Examples of Programming Languages</h4>
+
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>BASIC</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h4>Uses of Programming Languages</h4>
+
+    <ul>
+        <li>Develop computer software</li>
+        <li>Create websites</li>
+        <li>Develop mobile applications</li>
+        <li>Create games</li>
+        <li>Develop operating systems</li>
+        <li>Perform scientific calculations</li>
+        <li>Control machines and devices</li>
+        <li>Process and manage data</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.1.2 Low-Level, High-Level and 4GL Programming Languages</h3>
+
+    <h4>Low-Level Language</h4>
+
+    <p>
+        A <b>low-level language</b> is a programming language that is close
+        to computer hardware.
+    </p>
+
+    <p>
+        Low-level languages are difficult for humans to understand but can be
+        executed efficiently by computers.
+    </p>
+
+    <p><b>The main types of low-level languages are:</b></p>
+
+    <ol>
+        <li>Machine Language</li>
+        <li>Assembly Language</li>
+    </ol>
+
+    <h4>Machine Language</h4>
+
+    <p>
+        Machine language consists of binary digits, mainly 0 and 1.
+    </p>
+
+    <pre>
+10110000 01100001
+    </pre>
+
+    <h4>Advantages</h4>
+
+    <ul>
+        <li>Directly understood by the computer</li>
+        <li>Executes very quickly</li>
+        <li>Does not require a translator</li>
+    </ul>
+
+    <h4>Disadvantages</h4>
+
+    <ul>
+        <li>Difficult to write and understand</li>
+        <li>Difficult to debug</li>
+        <li>Machine dependent</li>
+        <li>Difficult to modify</li>
+    </ul>
+
+    <h4>Assembly Language</h4>
+
+    <p>
+        Assembly language uses mnemonic codes instead of binary instructions.
+    </p>
+
+    <p><b>Examples of mnemonics:</b></p>
+
+    <ul>
+        <li>ADD</li>
+        <li>SUB</li>
+        <li>MOV</li>
+        <li>MUL</li>
+    </ul>
+
+    <p>
+        An assembler is required to convert an assembly language program into
+        machine language.
+    </p>
+
+    <h4>Advantages</h4>
+
+    <ul>
+        <li>Easier than machine language</li>
+        <li>Faster execution</li>
+        <li>Provides direct hardware control</li>
+    </ul>
+
+    <h4>Disadvantages</h4>
+
+    <ul>
+        <li>Machine dependent</li>
+        <li>Difficult compared to high-level languages</li>
+        <li>Requires knowledge of computer architecture</li>
+    </ul>
+
+    <h4>High-Level Language</h4>
+
+    <p>
+        A <b>high-level language</b> is a programming language that uses
+        English-like words and mathematical symbols.
+    </p>
+
+    <p>
+        High-level languages are easier for humans to learn, write, and
+        understand.
+    </p>
+
+    <h4>Examples</h4>
+
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>BASIC</li>
+    </ul>
+
+    <h4>Advantages</h4>
+
+    <ul>
+        <li>Easy to learn</li>
+        <li>Easy to write</li>
+        <li>Easy to debug</li>
+        <li>Machine independent</li>
+        <li>Easier to maintain</li>
+    </ul>
+
+    <h4>Disadvantages</h4>
+
+    <ul>
+        <li>Requires a translator</li>
+        <li>May execute slower than machine language</li>
+        <li>Provides less direct hardware control</li>
+    </ul>
+
+    <h4>Fourth Generation Language (4GL)</h4>
+
+    <p>
+        A <b>Fourth Generation Language (4GL)</b> is a high-level programming
+        language designed to make programming easier and faster.
+    </p>
+
+    <p>
+        4GLs generally require fewer instructions to perform a task.
+    </p>
+
+    <h4>Uses of 4GL</h4>
+
+    <ul>
+        <li>Database applications</li>
+        <li>Report generation</li>
+        <li>Data analysis</li>
+        <li>Business applications</li>
+    </ul>
+
+    <h4>Examples</h4>
+
+    <ul>
+        <li>SQL</li>
+        <li>MATLAB</li>
+        <li>SAS</li>
+    </ul>
+
+    <h4>Comparison of Programming Languages</h4>
+
+    <table border="1">
+        <tr>
+            <th>Language Type</th>
+            <th>Level</th>
+            <th>Translator</th>
+            <th>Example</th>
+        </tr>
+
+        <tr>
+            <td>Machine Language</td>
+            <td>Very Low</td>
+            <td>Not Required</td>
+            <td>Binary Code</td>
+        </tr>
+
+        <tr>
+            <td>Assembly Language</td>
+            <td>Low</td>
+            <td>Assembler</td>
+            <td>ADD, MOV</td>
+        </tr>
+
+        <tr>
+            <td>High-Level Language</td>
+            <td>High</td>
+            <td>Compiler/Interpreter</td>
+            <td>C, Java</td>
+        </tr>
+
+        <tr>
+            <td>4GL</td>
+            <td>Very High</td>
+            <td>Special Translator</td>
+            <td>SQL</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>5.1.3 Compiler, Interpreter and Assembler</h3>
+
+    <p>
+        A computer understands only machine language. Therefore, programs
+        written in other languages must be translated into machine code.
+    </p>
+
+    <p>
+        Software used for this translation is called a
+        <b>language translator</b>.
+    </p>
+
+    <p><b>The main types are:</b></p>
+
+    <ol>
+        <li>Compiler</li>
+        <li>Interpreter</li>
+        <li>Assembler</li>
+    </ol>
+
+    <h4>Compiler</h4>
+
+    <p>
+        A <b>compiler</b> is a language translator that translates the entire
+        source program into machine code at once.
+    </p>
+
+    <p>
+        After successful compilation, an executable program can be created.
+    </p>
+
+    <h4>Examples of Compiled Languages</h4>
+
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Pascal</li>
+    </ul>
+
+    <h4>Advantages</h4>
+
+    <ul>
+        <li>Execution is generally faster after compilation.</li>
+        <li>Errors can be displayed after compilation.</li>
+        <li>The compiled program can be executed multiple times.</li>
+    </ul>
+
+    <h4>Interpreter</h4>
+
+    <p>
+        An <b>interpreter</b> translates and executes a program one statement
+        at a time.
+    </p>
+
+    <h4>Examples</h4>
+
+    <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h4>Advantages</h4>
+
+    <ul>
+        <li>Easier to test programs step by step.</li>
+        <li>Errors are reported one at a time.</li>
+        <li>No separate executable file is usually required.</li>
+    </ul>
+
+    <h4>Disadvantages</h4>
+
+    <ul>
+        <li>Execution is generally slower.</li>
+        <li>The program must be interpreted every time it is executed.</li>
+    </ul>
+
+    <h4>Assembler</h4>
+
+    <p>
+        An <b>assembler</b> is a translator used to convert assembly language
+        into machine language.
+    </p>
+
+    <pre>
+ADD A, B
+    </pre>
+
+    <h4>Difference Between Compiler and Interpreter</h4>
+
+    <table border="1">
+        <tr>
+            <th>Compiler</th>
+            <th>Interpreter</th>
+        </tr>
+
+        <tr>
+            <td>Translates the whole program at once</td>
+            <td>Translates one statement at a time</td>
+        </tr>
+
+        <tr>
+            <td>Execution is generally faster</td>
+            <td>Execution is generally slower</td>
+        </tr>
+
+        <tr>
+            <td>Errors are displayed after compilation</td>
+            <td>Errors are displayed line by line</td>
+        </tr>
+
+        <tr>
+            <td>Creates object or executable code</td>
+            <td>Usually does not create a separate executable file</td>
+        </tr>
+
+        <tr>
+            <td>Used by languages such as C</td>
+            <td>Used by languages such as Python</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>5.1.4 Syntax, Semantic and Runtime Errors</h3>
+
+    <p>
+        An <b>error</b> is a mistake in a program that causes incorrect results
+        or prevents the program from executing properly.
+    </p>
+
+    <ol>
+        <li>Syntax Error</li>
+        <li>Semantic Error</li>
+        <li>Runtime Error</li>
+    </ol>
+
+    <h4>Syntax Error</h4>
+
+    <p>
+        A syntax error occurs when the rules or grammar of a programming
+        language are violated.
+    </p>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+printf("Hello")
+    </pre>
+
+    <p>The above statement is missing a semicolon.</p>
+
+    <p><b>Correct form:</b></p>
+
+    <pre>
+printf("Hello");
+    </pre>
+
+    <h4>Semantic Error</h4>
+
+    <p>
+        A semantic error occurs when the syntax of a program is correct but the
+        meaning or logic of the statement is incorrect.
+    </p>
+
+    <pre>
+area = length + breadth;
+    </pre>
+
+    <p><b>Correct formula:</b></p>
+
+    <pre>
+area = length * breadth;
+    </pre>
+
+    <h4>Runtime Error</h4>
+
+    <p>
+        A runtime error occurs while a program is running.
+    </p>
+
+    <p><b>Examples:</b></p>
+
+    <ul>
+        <li>Division by zero</li>
+        <li>Accessing invalid memory</li>
+        <li>Opening a file that does not exist</li>
+    </ul>
+
+    <pre>
+result = 10 / 0;
+    </pre>
+
+    <hr>
+
+    <h3>5.1.5 Control Structures</h3>
+
+    <p>
+        The structure that controls the order of execution of statements is
+        called a <b>control structure</b>.
+    </p>
+
+    <ol>
+        <li>Sequence</li>
+        <li>Selection</li>
+        <li>Iteration</li>
+    </ol>
+
+    <h4>Sequence</h4>
+
+    <p>
+        In a sequence structure, statements are executed one after another in
+        the order in which they are written.
+    </p>
+
+    <pre>
+Input A
+Input B
+Sum = A + B
+Display Sum
+    </pre>
+
+    <h4>Selection</h4>
+
+    <p>
+        A selection structure is used when a program must choose between two
+        or more alternatives based on a condition.
+    </p>
+
+    <pre>
+If marks >= 40
+    Display "Pass"
+Else
+    Display "Fail"
+    </pre>
+
+    <h4>Iteration</h4>
+
+    <p>
+        An iteration structure is used to repeat a group of statements until a
+        condition becomes false or for a specified number of times.
+    </p>
+
+    <p><b>Examples of loops:</b></p>
+
+    <ul>
+        <li>while</li>
+        <li>do-while</li>
+        <li>for</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.1.6 Program Design Tools</h3>
+
+    <p>
+        Before writing a program, the programmer should plan the solution to
+        the problem.
+    </p>
+
+    <p>
+        Tools used to design and represent the solution of a problem are called
+        <b>program design tools</b>.
+    </p>
+
+    <ol>
+        <li>Algorithm</li>
+        <li>Flowchart</li>
+        <li>Pseudocode</li>
+    </ol>
+
+    <h4>Algorithm</h4>
+
+    <p>
+        An <b>algorithm</b> is a finite sequence of clear and logical steps
+        used to solve a problem.
+    </p>
+
+    <h4>Characteristics of a Good Algorithm</h4>
+
+    <ol>
+        <li>Input</li>
+        <li>Output</li>
+        <li>Definiteness</li>
+        <li>Finiteness</li>
+        <li>Effectiveness</li>
+    </ol>
+
+    <h4>Example: Algorithm to Find the Sum of Two Numbers</h4>
+
+    <ol>
+        <li>Start</li>
+        <li>Input two numbers A and B</li>
+        <li>Calculate Sum = A + B</li>
+        <li>Display Sum</li>
+        <li>Stop</li>
+    </ol>
+
+    <h4>Flowchart</h4>
+
+    <p>
+        A <b>flowchart</b> is a graphical representation of an algorithm.
+        It uses different symbols to represent different operations.
+    </p>
+
+    <table border="1">
+        <tr>
+            <th>Symbol Type</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>Oval</td>
+            <td>Start or Stop</td>
+        </tr>
+
+        <tr>
+            <td>Rectangle</td>
+            <td>Processing</td>
+        </tr>
+
+        <tr>
+            <td>Parallelogram</td>
+            <td>Input or Output</td>
+        </tr>
+
+        <tr>
+            <td>Diamond</td>
+            <td>Decision</td>
+        </tr>
+
+        <tr>
+            <td>Arrow</td>
+            <td>Direction of flow</td>
+        </tr>
+    </table>
+
+    <h4>Advantages of Flowchart</h4>
+
+    <ul>
+        <li>Easy to understand</li>
+        <li>Provides a visual representation</li>
+        <li>Helps in program development</li>
+        <li>Makes debugging easier</li>
+        <li>Helps identify logical errors</li>
+    </ul>
+
+    <h4>Pseudocode</h4>
+
+    <p>
+        <b>Pseudocode</b> is an informal way of writing the steps of a program
+        using simple English-like statements.
+    </p>
+
+    <pre>
+START
+INPUT A, B
+SUM = A + B
+PRINT SUM
+STOP
+    </pre>
+
+    <hr>
+
+    <h3>5.1.7 Binary, BCD, ASCII and Unicode</h3>
+
+    <h4>Binary Number System</h4>
+
+    <p>
+        The <b>binary number system</b> uses only two digits: 0 and 1.
+        It has a base of 2.
+    </p>
+
+    <pre>
+(1011)2
+    </pre>
+
+    <h4>BCD</h4>
+
+    <p>
+        <b>BCD (Binary Coded Decimal)</b> is a method of representing each
+        decimal digit separately using four binary digits.
+    </p>
+
+    <pre>
+2 = 0010
+5 = 0101
+
+25 = 0010 0101
+    </pre>
+
+    <h4>ASCII</h4>
+
+    <p>
+        <b>ASCII (American Standard Code for Information Interchange)</b> is a
+        character encoding standard used to represent letters, digits, and
+        symbols.
+    </p>
+
+    <table border="1">
+        <tr>
+            <th>Character</th>
+            <th>ASCII Value</th>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td>65</td>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            <td>66</td>
+        </tr>
+
+        <tr>
+            <td>a</td>
+            <td>97</td>
+        </tr>
+
+        <tr>
+            <td>0</td>
+            <td>48</td>
+        </tr>
+    </table>
+
+    <h4>Unicode</h4>
+
+    <p>
+        <b>Unicode</b> is a universal character encoding system designed to
+        represent characters from different languages.
+    </p>
+
+    <ul>
+        <li>English</li>
+        <li>Nepali</li>
+        <li>Hindi</li>
+        <li>Chinese</li>
+        <li>Arabic</li>
+        <li>Japanese</li>
+    </ul>
+
+    <pre>
+A
+अ
+क
+中
+    </pre>
+
+    <hr>
+
+    <h2>5.2 C Programming Language</h2>
+
+    <p>
+        C is one of the most important and widely used programming languages.
+        It is a general-purpose programming language used for developing
+        different types of software and system applications.
+    </p>
+
+    <hr>
+
+    <h3>5.2.1 Introduction and Features of C Language</h3>
+
+    <p>
+        The C programming language was developed by <b>Dennis Ritchie</b> at
+        Bell Laboratories in the early 1970s.
+    </p>
+
+    <p>
+        C is called a general-purpose and structured programming language.
+    </p>
+
+    <h4>Uses of C Language</h4>
+
+    <ul>
+        <li>System programming</li>
+        <li>Application development</li>
+        <li>Operating systems</li>
+        <li>Embedded systems</li>
+        <li>Scientific programs</li>
+    </ul>
+
+    <h4>Features of C Language</h4>
+
+    <ol>
+        <li>Simple and efficient</li>
+        <li>Structured programming language</li>
+        <li>Portable</li>
+        <li>Fast execution</li>
+        <li>Rich set of operators</li>
+        <li>Supports functions</li>
+        <li>Supports pointers</li>
+        <li>Supports dynamic memory allocation</li>
+        <li>Suitable for system programming</li>
+    </ol>
+
+    <h4>Advantages of C</h4>
+
+    <ul>
+        <li>Easy to learn</li>
+        <li>Efficient and fast</li>
+        <li>Portable</li>
+        <li>Supports modular programming</li>
+        <li>Provides low-level memory access</li>
+    </ul>
+
+    <h4>Limitations of C</h4>
+
+    <ul>
+        <li>Does not provide automatic garbage collection</li>
+        <li>Complex programs can be difficult to manage</li>
+        <li>Does not provide strong built-in object-oriented features</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.2.2 Structure of a C Program</h3>
+
+    <p>
+        A simple C program generally contains different sections such as
+        preprocessor directives, functions, and program statements.
+    </p>
+
+    <h4>Example of a Simple C Program</h4>
+
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World");
+    return 0;
+}
+    </pre>
+
+    <h4>Explanation</h4>
+
+    <ul>
+        <li>#include &lt;stdio.h&gt; includes the standard input/output header file.</li>
+        <li>int main() is the main function where program execution begins.</li>
+        <li>{ } are braces used to define a block.</li>
+        <li>printf() displays output.</li>
+        <li>return 0; indicates successful completion of the program.</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.2.3 C Preprocessor and Header Files</h3>
+
+    <p>
+        The <b>C preprocessor</b> processes instructions before the actual
+        compilation of the program.
+    </p>
+
+    <p>Preprocessor directives begin with the # symbol.</p>
+
+    <pre>
+#include
+#define
+    </pre>
+
+    <h4>#include</h4>
+
+    <p>
+        The #include directive is used to include header files.
+    </p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+    </pre>
+
+    <h4>#define</h4>
+
+    <p>
+        The #define directive is used to define constants or macros.
+    </p>
+
+    <pre>
+#define PI 3.14
+    </pre>
+
+    <h4>Common Header Files</h4>
+
+    <table border="1">
+        <tr>
+            <th>Header File</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>stdio.h</td>
+            <td>Standard input/output functions</td>
+        </tr>
+
+        <tr>
+            <td>conio.h</td>
+            <td>Console input/output functions</td>
+        </tr>
+
+        <tr>
+            <td>string.h</td>
+            <td>String handling functions</td>
+        </tr>
+
+        <tr>
+            <td>math.h</td>
+            <td>Mathematical functions</td>
+        </tr>
+
+        <tr>
+            <td>stdlib.h</td>
+            <td>General utility functions</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>5.2.4 Character Set Used in C</h3>
+
+    <p>
+        The <b>character set</b> refers to the valid characters that can be
+        used while writing a C program.
+    </p>
+
+    <h4>Alphabets</h4>
+
+    <pre>
+A to Z
+a to z
+    </pre>
+
+    <h4>Digits</h4>
+
+    <pre>
+0 to 9
+    </pre>
+
+    <h4>Special Symbols</h4>
+
+    <pre>
++  -  *  /  %
+=  &lt;  &gt;
+(  )
+{  }
+[  ]
+;  :
+,  .
+#  !
+    </pre>
+
+    <h4>White Space Characters</h4>
+
+    <ul>
+        <li>Space</li>
+        <li>Tab</li>
+        <li>New line</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.2.5 Use of Comments</h3>
+
+    <p>
+        A <b>comment</b> is explanatory text written inside a program.
+        Comments are ignored by the compiler and do not affect program
+        execution.
+    </p>
+
+    <h4>Single-Line Comment</h4>
+
+    <pre>
+// This is a single-line comment
+    </pre>
+
+    <h4>Multi-Line Comment</h4>
+
+    <pre>
+/*
+   This is a
+   multi-line comment
+*/
+    </pre>
+
+    <h4>Advantages of Comments</h4>
+
+    <ul>
+        <li>Improve program readability</li>
+        <li>Explain complex statements</li>
+        <li>Help in program maintenance</li>
+        <li>Make programs easier to understand</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.2.6 Identifiers, Keywords and Tokens</h3>
+
+    <h4>Identifier</h4>
+
+    <p>
+        An <b>identifier</b> is the name given to program elements such as
+        variables, functions, arrays, and structures.
+    </p>
+
+    <pre>
+total
+marks
+studentName
+    </pre>
+
+    <h4>Rules for Identifiers</h4>
+
+    <ol>
+        <li>Must begin with a letter or underscore.</li>
+        <li>Cannot begin with a digit.</li>
+        <li>Cannot contain spaces.</li>
+        <li>Cannot use special symbols except underscore.</li>
+        <li>Cannot be a keyword.</li>
+        <li>C identifiers are case-sensitive.</li>
+    </ol>
+
+    <h4>Keywords</h4>
+
+    <p>
+        <b>Keywords</b> are reserved words that have predefined meanings in C.
+    </p>
+
+    <pre>
+int
+float
+char
+if
+else
+while
+for
+return
+    </pre>
+
+    <h4>Tokens</h4>
+
+    <p>
+        A <b>token</b> is the smallest individual unit in a C program.
+    </p>
+
+    <ul>
+        <li>Keywords</li>
+        <li>Identifiers</li>
+        <li>Constants</li>
+        <li>Strings</li>
+        <li>Operators</li>
+        <li>Special symbols</li>
+    </ul>
+
+    <pre>
+int sum = a + b;
+    </pre>
+
+    <hr>
+
+    <h3>5.2.7 Basic Data Types in C</h3>
+
+    <p>
+        A <b>data type</b> specifies the type of data that a variable can store.
+    </p>
+
+    <table border="1">
+        <tr>
+            <th>Data Type</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+
+        <tr>
+            <td>int</td>
+            <td>Integer values</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>float</td>
+            <td>Decimal values</td>
+            <td>12.5</td>
+        </tr>
+
+        <tr>
+            <td>double</td>
+            <td>Large decimal values</td>
+            <td>123.456</td>
+        </tr>
+
+        <tr>
+            <td>char</td>
+            <td>Single character</td>
+            <td>'A'</td>
+        </tr>
+
+        <tr>
+            <td>void</td>
+            <td>No value</td>
+            <td>void function</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>5.2.8 Constants and Variables</h3>
+
+    <h4>Constant</h4>
+
+    <p>
+        A <b>constant</b> is a value that does not change during the execution
+        of a program.
+    </p>
+
+    <pre>
+10
+3.14
+'A'
+    </pre>
+
+    <h4>Variable</h4>
+
+    <p>
+        A <b>variable</b> is a named memory location used to store data that
+        can change during program execution.
+    </p>
+
+    <pre>
+int marks = 80;
+    </pre>
+
+    <h4>Rules for Declaring Variables</h4>
+
+    <ul>
+        <li>Have a valid identifier name</li>
+        <li>Be declared with a data type</li>
+        <li>Not use keywords as names</li>
+    </ul>
+
+    <hr>
+
+    <h3>5.2.9 Type Specifiers</h3>
+
+    <p>
+        A <b>type specifier</b> tells the compiler about the type and
+        characteristics of data stored in a variable.
+    </p>
+
+    <ul>
+        <li>short</li>
+        <li>long</li>
+        <li>signed</li>
+        <li>unsigned</li>
+    </ul>
+
+    <h4>Examples</h4>
+
+    <pre>
+short int number;
+long int population;
+signed int value;
+unsigned int age;
+    </pre>
+
+    <hr>
+
+    <h3>5.2.10 Simple and Compound Statements</h3>
+
+    <h4>Simple Statement</h4>
+
+    <p>
+        A <b>simple statement</b> is a single statement that normally ends
+        with a semicolon.
+    </p>
+
+    <pre>
+int a = 10;
+a = a + 5;
+    </pre>
+
+    <h4>Compound Statement</h4>
+
+    <p>
+        A <b>compound statement</b> is a group of statements enclosed within
+        curly braces.
+    </p>
+
+    <pre>
+{
+    int a = 10;
+    int b = 20;
+    int sum = a + b;
+}
+    </pre>
+
+    <hr>
+
+    <h3>5.2.11 Operators and Expressions</h3>
+
+    <p>
+        An <b>operator</b> is a symbol used to perform an operation on one or
+        more operands.
+    </p>
+
+    <p>
+        An <b>expression</b> is a combination of operands and operators that
+        produces a value.
+    </p>
+
+    <h4>Arithmetic Operators</h4>
+
+    <table border="1">
+        <tr>
+            <th>Operator</th>
+            <th>Operation</th>
+        </tr>
+
+        <tr><td>+</td><td>Addition</td></tr>
+        <tr><td>-</td><td>Subtraction</td></tr>
+        <tr><td>*</td><td>Multiplication</td></tr>
+        <tr><td>/</td><td>Division</td></tr>
+        <tr><td>%</td><td>Modulus</td></tr>
+    </table>
+
+    <h4>Relational Operators</h4>
+
+    <table border="1">
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr><td>==</td><td>Equal to</td></tr>
+        <tr><td>!=</td><td>Not equal to</td></tr>
+        <tr><td>&gt;</td><td>Greater than</td></tr>
+        <tr><td>&lt;</td><td>Less than</td></tr>
+        <tr><td>&gt;=</td><td>Greater than or equal to</td></tr>
+        <tr><td>&lt;=</td><td>Less than or equal to</td></tr>
+    </table>
+
+    <h4>Logical Operators</h4>
+
+    <table border="1">
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr><td>&amp;&amp;</td><td>Logical AND</td></tr>
+        <tr><td>||</td><td>Logical OR</td></tr>
+        <tr><td>!</td><td>Logical NOT</td></tr>
+    </table>
+
+    <h4>Assignment Operators</h4>
+
+    <table border="1">
+        <tr>
+            <th>Operator</th>
+            <th>Example</th>
+        </tr>
+
+        <tr><td>=</td><td>a = 10</td></tr>
+        <tr><td>+=</td><td>a += 5</td></tr>
+        <tr><td>-=</td><td>a -= 5</td></tr>
+        <tr><td>*=</td><td>a *= 5</td></tr>
+        <tr><td>/=</td><td>a /= 5</td></tr>
+    </table>
+
+    <h4>Unary Operators</h4>
+
+    <pre>
+++a
+--a
+-a
+    </pre>
+
+    <h4>Conditional Operator</h4>
+
+    <pre>
+condition ? expression1 : expression2;
+
+max = (a > b) ? a : b;
+    </pre>
+
+    <hr>
+
+    <h3>5.2.12 Input and Output Functions</h3>
+
+    <p>
+        Input and output functions are used to communicate with the user.
+    </p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+    </pre>
+
+    <h4>printf()</h4>
+
+    <p>The printf() function is used to display output.</p>
+
+    <pre>
+printf("Hello");
+    </pre>
+
+    <h4>scanf()</h4>
+
+    <p>The scanf() function is used to take input from the user.</p>
+
+    <pre>
+scanf("%d", &amp;age);
+    </pre>
+
+    <h4>Common Format Specifiers</h4>
+
+    <table border="1">
+        <tr>
+            <th>Format Specifier</th>
+            <th>Data Type</th>
+        </tr>
+
+        <tr><td>%d</td><td>int</td></tr>
+        <tr><td>%f</td><td>float</td></tr>
+        <tr><td>%lf</td><td>double</td></tr>
+        <tr><td>%c</td><td>char</td></tr>
+        <tr><td>%s</td><td>string</td></tr>
+    </table>
+
+    <hr>
+
+    <h3>5.2.13 Selection Control Statements</h3>
+
+    <p>
+        Selection control statements are used to make decisions based on
+        conditions.
+    </p>
+
+    <ol>
+        <li>if</li>
+        <li>if-else</li>
+        <li>if-else-if</li>
+        <li>Nested if</li>
+        <li>switch</li>
+    </ol>
+
+    <h4>if Statement</h4>
+
+    <pre>
+if(condition)
+{
+    statements;
+}
+    </pre>
+
+    <h4>if-else Statement</h4>
+
+    <pre>
+if(condition)
+{
+    statements;
+}
+else
+{
+    statements;
+}
+    </pre>
+
+    <h4>if-else-if Ladder</h4>
+
+    <pre>
+if(marks >= 80)
+    printf("Distinction");
+else if(marks >= 60)
+    printf("First Division");
+else if(marks >= 40)
+    printf("Second Division");
+else
+    printf("Fail");
+    </pre>
+
+    <h4>Nested if</h4>
+
+    <pre>
+if(age >= 18)
+{
+    if(age <= 60)
+    {
+        printf("Eligible");
+    }
+}
+    </pre>
+
+    <h4>switch Statement</h4>
+
+    <pre>
+switch(expression)
+{
+    case value1:
+        statements;
+        break;
+
+    case value2:
+        statements;
+        break;
+
+    default:
+        statements;
+}
+    </pre>
+
+    <hr>
+
+    <h3>5.2.14 Iteration Control Statements</h3>
+
+    <p>
+        Iteration statements are used to repeat a set of statements.
+    </p>
+
+    <ol>
+        <li>while loop</li>
+        <li>do-while loop</li>
+        <li>for loop</li>
+        <li>Nested loop</li>
+    </ol>
+
+    <h4>while Loop</h4>
+
+    <pre>
+while(condition)
+{
+    statements;
+}
+    </pre>
+
+    <h4>do-while Loop</h4>
+
+    <pre>
+do
+{
+    statements;
+}
+while(condition);
+    </pre>
+
+    <h4>for Loop</h4>
+
+    <pre>
+for(initialization; condition; increment)
+{
+    statements;
+}
+    </pre>
+
+    <h4>Example</h4>
+
+    <pre>
+for(i = 1; i <= 5; i++)
+{
+    printf("%d", i);
+}
+    </pre>
+
+    <h4>Nested Loop</h4>
+
+    <pre>
+for(i = 1; i <= 3; i++)
+{
+    for(j = 1; j <= 3; j++)
+    {
+        printf("*");
+    }
+}
+    </pre>
+
+    <hr>
+
+    <h3>5.2.15 Array</h3>
+
+    <p>
+        An <b>array</b> is a collection of elements of the same data type
+        stored under a single name.
+    </p>
+
+    <p>
+        Each element in an array is accessed using an index. The first index
+        of an array in C is 0.
+    </p>
+
+    <h4>Types of Arrays</h4>
+
+    <ol>
+        <li>One-Dimensional Array</li>
+        <li>Two-Dimensional Array</li>
+    </ol>
+
+    <h4>One-Dimensional Array</h4>
+
+    <pre>
+data_type array_name[size];
+
+int marks[5];
+    </pre>
+
+    <h4>Two-Dimensional Array</h4>
+
+    <pre>
+data_type array_name[rows][columns];
+
+int matrix[3][3];
+    </pre>
+
+    <h4>Matrix Addition</h4>
+
+    <pre>
+C[i][j] = A[i][j] + B[i][j];
+    </pre>
+
+    <h4>Matrix Subtraction</h4>
+
+    <pre>
+C[i][j] = A[i][j] - B[i][j];
+    </pre>
+
+    <hr>
+
+    <h3>5.2.16 String</h3>
+
+    <p>
+        A <b>string</b> is a collection of characters stored in a character
+        array.
+    </p>
+
+    <p>
+        In C, a string ends with a special null character.
+    </p>
+
+    <pre>
+'\0'
+
+char name[] = "Ram";
+    </pre>
+
+    <h4>Common String Functions</h4>
+
+    <table border="1">
+        <tr>
+            <th>Function</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr><td>strlen()</td><td>Finds the length of a string</td></tr>
+        <tr><td>strcat()</td><td>Joins two strings</td></tr>
+        <tr><td>strcmp()</td><td>Compares two strings</td></tr>
+        <tr><td>strrev()</td><td>Reverses a string</td></tr>
+        <tr><td>strcpy()</td><td>Copies one string to another</td></tr>
+        <tr><td>strlwr()</td><td>Converts a string to lowercase</td></tr>
+        <tr><td>strupr()</td><td>Converts a string to uppercase</td></tr>
+    </table>
+
+    <h4>Examples</h4>
+
+    <pre>
+strlen("Computer");
+
+strcat(str1, str2);
+
+strcmp(str1, str2);
+
+strrev("Hello");
+
+strcpy(str1, str2);
+
+strlwr("HELLO");
+
+strupr("hello");
+    </pre>
+
+    <hr>
+
+    <center>
+        <h2>Comparison of Program Design Tools</h2>
+    </center>
+
+    <table border="1">
+        <tr>
+            <th>Tool</th>
+            <th>Description</th>
+            <th>Representation</th>
+        </tr>
+
+        <tr>
+            <td>Algorithm</td>
+            <td>Step-by-step solution</td>
+            <td>Simple statements</td>
+        </tr>
+
+        <tr>
+            <td>Flowchart</td>
+            <td>Graphical solution</td>
+            <td>Symbols and arrows</td>
+        </tr>
+
+        <tr>
+            <td>Pseudocode</td>
+            <td>English-like program logic</td>
+            <td>Informal statements</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <center>
+        <h2>Comparison of Control Structures</h2>
+    </center>
+
+    <table border="1">
+        <tr>
+            <th>Control Structure</th>
+            <th>Purpose</th>
+            <th>Example</th>
+        </tr>
+
+        <tr>
+            <td>Sequence</td>
+            <td>Executes statements in order</td>
+            <td>Input, Process, Output</td>
+        </tr>
+
+        <tr>
+            <td>Selection</td>
+            <td>Chooses between alternatives</td>
+            <td>if, switch</td>
+        </tr>
+
+        <tr>
+            <td>Iteration</td>
+            <td>Repeats statements</td>
+            <td>while, for</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <center>
+        <h2>Comparison of Loops</h2>
+    </center>
+
+    <table border="1">
+        <tr>
+            <th>Loop</th>
+            <th>Condition Checking</th>
+            <th>Minimum Execution</th>
+        </tr>
+
+        <tr>
+            <td>while</td>
+            <td>Before execution</td>
+            <td>0 times</td>
+        </tr>
+
+        <tr>
+            <td>do-while</td>
+            <td>After execution</td>
+            <td>1 time</td>
+        </tr>
+
+        <tr>
+            <td>for</td>
+            <td>Before execution</td>
+            <td>Depends on condition</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <center>
+        <h2>Chapter Summary</h2>
+    </center>
+
+    <ul>
+        <li>Programming is the process of writing instructions for a computer.</li>
+        <li>A programming language is used to write computer programs.</li>
+        <li>Programming languages can be low-level, high-level, and 4GL.</li>
+        <li>Machine language uses binary digits.</li>
+        <li>Assembly language uses mnemonic instructions.</li>
+        <li>High-level languages are easier for humans to understand.</li>
+        <li>A compiler translates an entire program at once.</li>
+        <li>An interpreter translates one statement at a time.</li>
+        <li>An assembler converts assembly language into machine language.</li>
+        <li>Common errors include syntax, semantic, and runtime errors.</li>
+        <li>The main control structures are sequence, selection, and iteration.</li>
+        <li>Algorithms, flowcharts, and pseudocode are program design tools.</li>
+        <li>Computers use binary systems to represent data.</li>
+        <li>BCD represents decimal digits using binary values.</li>
+        <li>ASCII and Unicode are character encoding systems.</li>
+        <li>C is a general-purpose and structured programming language.</li>
+        <li>Comments improve the readability of programs.</li>
+        <li>Identifiers are names given to program elements.</li>
+        <li>Keywords are reserved words in C.</li>
+        <li>Variables store values that can change.</li>
+        <li>Constants store fixed values.</li>
+        <li>Operators are used to perform operations.</li>
+        <li>printf() and scanf() are commonly used I/O functions.</li>
+        <li>Selection statements are used for decision making.</li>
+        <li>Loops are used to repeat statements.</li>
+        <li>Arrays store multiple values of the same data type.</li>
+        <li>One-dimensional arrays use a single index.</li>
+        <li>Two-dimensional arrays are commonly used for matrices.</li>
+        <li>Strings are collections of characters.</li>
+        <li>C provides different string functions for manipulating strings.</li>
+    </ul>
+
+    <hr>
+
+    <center>
+        <b>End of Chapter 5</b>
+    </center>
+
+</body>
+
+</html>
+```
