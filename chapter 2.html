@@ -1,7 +1,453 @@
 <html>
-    <head>
-        <body>
-            
-        </body>
-    </head>
+<head>
+<title>Unit 2 - Number System and Boolean Logic</title>
+</head>
+<body>
+
+<h1>Unit 2: Number System and Conversion, Boolean Logic</h1>
+<h3>Grade XI Computer Science</h3>
+
+<hr>
+
+<h2>2.1 Number System and Conversion</h2>
+
+<p>A <b>number system</b> is a way of representing numbers using a set of symbols (digits) and rules. Every number system has a <b>base</b>, also called <b>radix</b>, which tells us how many different digits are used in that system.</p>
+
+<p>Computers work internally with electronic circuits that can only recognize two states, ON and OFF. Because of this, computers use the <b>binary number system</b>, but for human convenience we also use decimal, octal and hexadecimal systems.</p>
+
+<h3>2.1.1 Decimal, Binary, Octal, Hexadecimal Number System and Conversion</h3>
+
+<p><b>a) Decimal Number System</b></p>
+<ul>
+<li>Base (radix) = 10</li>
+<li>Digits used: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</li>
+<li>This is the number system we use in daily life</li>
+</ul>
+
+<p><font>Example</font></p>
+<pre>
+457 = (4 x 10^2) + (5 x 10^1) + (7 x 10^0)
+</pre>
+
+<p><b>b) Binary Number System</b></p>
+<ul>
+<li>Base (radix) = 2</li>
+<li>Digits used: 0 and 1, called bits (binary digits)</li>
+<li>This is the number system used internally by computers, since 0 can represent OFF and 1 can represent ON</li>
+</ul>
+
+<p><b>c) Octal Number System</b></p>
+<ul>
+<li>Base (radix) = 8</li>
+<li>Digits used: 0, 1, 2, 3, 4, 5, 6, 7</li>
+</ul>
+
+<p><b>d) Hexadecimal Number System</b></p>
+<ul>
+<li>Base (radix) = 16</li>
+<li>Digits used: 0 to 9 and A, B, C, D, E, F</li>
+<li>Here A = 10, B = 11, C = 12, D = 13, E = 14, F = 15</li>
+</ul>
+
+<h3>Summary Table</h3>
+<table>
+<tr><th>Number System</th><th>Base</th><th>Digits Used</th></tr>
+<tr><td>Decimal</td><td>10</td><td>0-9</td></tr>
+<tr><td>Binary</td><td>2</td><td>0, 1</td></tr>
+<tr><td>Octal</td><td>8</td><td>0-7</td></tr>
+<tr><td>Hexadecimal</td><td>16</td><td>0-9, A-F</td></tr>
+</table>
+
+<hr>
+
+<h3>Conversion Between Number Systems</h3>
+
+<p><b>1) Decimal to Binary, Octal or Hexadecimal</b></p>
+<p>Divide the decimal number repeatedly by the base and note the remainders. Read the remainders from bottom to top.</p>
+
+<p><font>Example: Convert 25 (base 10) to binary</font></p>
+<table>
+<tr><th>Division</th><th>Quotient</th><th>Remainder</th></tr>
+<tr><td>25 / 2</td><td>12</td><td>1</td></tr>
+<tr><td>12 / 2</td><td>6</td><td>0</td></tr>
+<tr><td>6 / 2</td><td>3</td><td>0</td></tr>
+<tr><td>3 / 2</td><td>1</td><td>1</td></tr>
+<tr><td>1 / 2</td><td>0</td><td>1</td></tr>
+</table>
+<p>Reading remainders bottom to top: <b>25 (base 10) = 11001 (base 2)</b></p>
+
+<p><font>Example: Convert 89 (base 10) to octal</font></p>
+<table>
+<tr><th>Division</th><th>Quotient</th><th>Remainder</th></tr>
+<tr><td>89 / 8</td><td>11</td><td>1</td></tr>
+<tr><td>11 / 8</td><td>1</td><td>3</td></tr>
+<tr><td>1 / 8</td><td>0</td><td>1</td></tr>
+</table>
+<p><b>89 (base 10) = 131 (base 8)</b></p>
+
+<p><font>Example: Convert 423 (base 10) to hexadecimal</font></p>
+<table>
+<tr><th>Division</th><th>Quotient</th><th>Remainder</th></tr>
+<tr><td>423 / 16</td><td>26</td><td>7</td></tr>
+<tr><td>26 / 16</td><td>1</td><td>10 (A)</td></tr>
+<tr><td>1 / 16</td><td>0</td><td>1</td></tr>
+</table>
+<p><b>423 (base 10) = 1A7 (base 16)</b></p>
+
+<p><b>2) Binary, Octal or Hexadecimal to Decimal</b></p>
+<p>Multiply each digit by base raised to its position, starting from 0 at the rightmost digit, then add the results.</p>
+
+<p><font>Example: Convert 1101 (base 2) to decimal</font></p>
+<pre>
+1101(2) = (1x2^3) + (1x2^2) + (0x2^1) + (1x2^0)
+        = 8 + 4 + 0 + 1
+        = 13(10)
+</pre>
+
+<p><font>Example: Convert 247 (base 8) to decimal</font></p>
+<pre>
+247(8) = (2x8^2) + (4x8^1) + (7x8^0)
+       = 128 + 32 + 7
+       = 167(10)
+</pre>
+
+<p><font>Example: Convert 2B (base 16) to decimal</font></p>
+<pre>
+2B(16) = (2x16^1) + (11x16^0)
+       = 32 + 11
+       = 43(10)
+</pre>
+
+<p><b>3) Binary to Octal and Octal to Binary</b></p>
+<p>Since 8 = 2 to the power 3, each octal digit equals exactly 3 binary digits.</p>
+
+<p><font>Example: Convert 110101 (base 2) to octal</font></p>
+<pre>
+Group in 3s from right: 110  101
+                          6    5
+110101(2) = 65(8)
+</pre>
+
+<p><font>Example: Convert 47 (base 8) to binary</font></p>
+<pre>
+4 = 100      7 = 111
+47(8) = 100111(2)
+</pre>
+
+<p><b>4) Binary to Hexadecimal and Hexadecimal to Binary</b></p>
+<p>Since 16 = 2 to the power 4, each hexadecimal digit equals exactly 4 binary digits.</p>
+
+<p><font>Example: Convert 10111010 (base 2) to hexadecimal</font></p>
+<pre>
+Group in 4s from right: 1011  1010
+                          B     A
+10111010(2) = BA(16)
+</pre>
+
+<p><font>Example: Convert 9F (base 16) to binary</font></p>
+<pre>
+9 = 1001      F = 1111
+9F(16) = 10011111(2)
+</pre>
+
+<hr>
+
+<h3>2.1.2 Calculation in Binary, Addition and Subtraction</h3>
+
+<p><b>Binary Addition Rules</b></p>
+<table>
+<tr><th>A</th><th>B</th><th>Sum</th><th>Carry</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+</table>
+
+<p><font>Example: Add 1011 and 1101</font></p>
+<pre>
+    1 1 1     (carries)
+    1 0 1 1
+  + 1 1 0 1
+  ---------
+  1 1 0 0 0
+</pre>
+<p>Check in decimal: 11 + 13 = 24, and 11000(2) = 24. This matches.</p>
+
+<p><b>Binary Subtraction Rules</b></p>
+<table>
+<tr><th>A</th><th>B</th><th>A - B</th><th>Borrow</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<p><font>Example: Subtract 1010 from 1110</font></p>
+<pre>
+    1 1 1 0
+  - 1 0 1 0
+  ---------
+    0 1 0 0
+</pre>
+<p>Check in decimal: 14 - 10 = 4, and 0100(2) = 4. This matches.</p>
+
+<hr>
+
+<h3>2.1.3 One's and Two's Complement Methods of Binary Subtraction</h3>
+
+<p>Computers cannot use the borrow method directly in circuits, so subtraction is usually done using complements, which allow subtraction to be performed as addition.</p>
+
+<p><b>1's Complement</b></p>
+<p>The 1's complement of a binary number is obtained by inverting all the bits, changing every 0 to 1 and every 1 to 0.</p>
+<p><font>Example: 1's complement of 1010 is 0101</font></p>
+
+<p><b>Steps for subtraction using 1's complement (A minus B)</b></p>
+<ol>
+<li>Find the 1's complement of B</li>
+<li>Add it to A</li>
+<li>If there is a carry out of the leftmost bit, add that carry back to the result. This is called end around carry, and the result is positive</li>
+<li>If there is no carry, the result is negative, and the answer is the 1's complement of the sum obtained</li>
+</ol>
+
+<p><font>Example: Subtract 1010 from 1110 using 1's complement</font></p>
+<pre>
+A = 1110, B = 1010
+1's complement of B = 0101
+Add:  1110 + 0101 = 1 0011   (carry generated)
+Add carry back: 0011 + 1 = 0100
+Answer = 0100 = 4  (matches direct subtraction 14-10=4)
+</pre>
+
+<p><b>2's Complement</b></p>
+<p>The 2's complement of a binary number is obtained by taking the 1's complement and then adding 1 to the least significant bit.</p>
+<p><font>Example: 2's complement of 1010: 1's complement = 0101, then 0101+1 = 0110</font></p>
+
+<p><b>Steps for subtraction using 2's complement (A minus B)</b></p>
+<ol>
+<li>Find the 2's complement of B</li>
+<li>Add it to A</li>
+<li>If there is a carry out of the leftmost bit, discard the carry. The result is positive</li>
+<li>If there is no carry, the result is negative, and the actual answer is the 2's complement of the sum obtained</li>
+</ol>
+
+<p><font>Example: Subtract 1010 from 1110 using 2's complement</font></p>
+<pre>
+A = 1110, B = 1010
+2's complement of B: 1's complement = 0101, +1 = 0110
+Add:  1110 + 0110 = 1 0100
+Carry generated, so discard it
+Answer = 0100 = 4  (matches direct subtraction)
+</pre>
+
+<p>2's complement is more widely used in modern computers because it has only one representation of zero and does not need the end around carry step.</p>
+
+<hr>
+
+<h2>2.2 Logic Function and Boolean Algebra</h2>
+
+<h3>2.2.1 Introduction to Boolean Algebra</h3>
+
+<p><b>Boolean algebra</b> is a branch of mathematics that deals with variables that can have only two values, True (1) or False (0). It was developed by the mathematician George Boole and forms the mathematical foundation of digital electronics and computer logic circuits.</p>
+
+<p>Boolean algebra is used to:</p>
+<ul>
+<li>Design and simplify digital circuits</li>
+<li>Analyze logic gates</li>
+<li>Represent decision making conditions in computer programs</li>
+</ul>
+
+<h3>2.2.2 Boolean Values, Truth Table, Boolean Expression and Boolean Function</h3>
+
+<p><b>Boolean Values</b> can only be one of two states</p>
+<table>
+<tr><th>Represents True</th><th>Represents False</th></tr>
+<tr><td>1, High, ON, Yes</td><td>0, Low, OFF, No</td></tr>
+</table>
+
+<p><b>Truth Table</b>: A table that lists all possible combinations of input values for a Boolean expression, along with the resulting output for each combination. If there are n input variables, the truth table has 2 to the power n rows.</p>
+
+<p><b>Boolean Expression</b>: An expression made of Boolean variables such as A, B, C combined using Boolean operators AND, OR, NOT.</p>
+<p><font>Example: Y = A.B + C(complement)</font></p>
+
+<p><b>Boolean Function</b>: A rule that maps Boolean input variables to a single Boolean output, usually written using a Boolean expression.</p>
+<p><font>Example: F(A,B) = A + B is a Boolean function of two variables A and B</font></p>
+
+<h3>2.2.3 Logic Gates</h3>
+
+<p>A <b>logic gate</b> is a basic building block of digital circuits that performs a Boolean logic operation on one or more binary inputs and produces a single binary output.</p>
+
+<p><b>1) AND Gate</b></p>
+<p>Output is 1 only when all inputs are 1. Boolean Expression: Y = A.B</p>
+<table>
+<tr><th>A</th><th>B</th><th>Y = A.B</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<p><b>2) OR Gate</b></p>
+<p>Output is 1 if at least one input is 1. Boolean Expression: Y = A+B</p>
+<table>
+<tr><th>A</th><th>B</th><th>Y = A+B</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<p><b>3) NOT Gate</b></p>
+<p>Output is the inverse (complement) of the input. Also called an inverter. Boolean Expression: Y = A(complement)</p>
+<table>
+<tr><th>A</th><th>Y</th></tr>
+<tr><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>0</td></tr>
+</table>
+
+<p><b>4) NAND Gate</b></p>
+<p>Output is 0 only when all inputs are 1. It is the complement of AND. Boolean Expression: Y = (A.B) complement</p>
+<table>
+<tr><th>A</th><th>B</th><th>Y</th></tr>
+<tr><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+
+<p><b>5) NOR Gate</b></p>
+<p>Output is 1 only when all inputs are 0. It is the complement of OR. Boolean Expression: Y = (A+B) complement</p>
+<table>
+<tr><th>A</th><th>B</th><th>Y</th></tr>
+<tr><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+
+<p><b>6) XOR Gate</b></p>
+<p>Output is 1 when the two inputs are different from each other. Boolean Expression: Y = A XOR B</p>
+<table>
+<tr><th>A</th><th>B</th><th>Y</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+
+<p><b>7) XNOR Gate</b></p>
+<p>Output is 1 when the two inputs are the same. It is the complement of XOR. Boolean Expression: Y = (A XOR B) complement</p>
+<table>
+<tr><th>A</th><th>B</th><th>Y</th></tr>
+<tr><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<p><font>Note</font>: Each gate has its own standard graphical symbol used in circuit diagrams. AND and OR gates have a curved or flat back with a pointed or rounded front, the NOT gate is a triangle with a small bubble at the output, and NAND, NOR, XNOR use the same shapes as AND, OR, XOR but with a bubble added at the output to show inversion.</p>
+
+<hr>
+
+<h3>2.2.4 Laws of Boolean Algebra</h3>
+
+<p>These laws, also called Boolean identities, are used to simplify Boolean expressions and digital circuits.</p>
+
+<p><b>1) Complement Laws</b></p>
+<table>
+<tr><th>Law</th><th>Expression</th></tr>
+<tr><td>Complement Law 1</td><td>A + A(complement) = 1</td></tr>
+<tr><td>Complement Law 2</td><td>A . A(complement) = 0</td></tr>
+<tr><td>Double Complement</td><td>A(complement complement) = A</td></tr>
+</table>
+
+<p><b>2) Identity Laws</b></p>
+<table>
+<tr><th>Law</th><th>Expression</th></tr>
+<tr><td>OR Identity</td><td>A + 0 = A</td></tr>
+<tr><td>AND Identity</td><td>A . 1 = A</td></tr>
+<tr><td>OR with 1</td><td>A + 1 = 1</td></tr>
+<tr><td>AND with 0</td><td>A . 0 = 0</td></tr>
+<tr><td>Idempotent OR</td><td>A + A = A</td></tr>
+<tr><td>Idempotent AND</td><td>A . A = A</td></tr>
+</table>
+
+<p><b>3) Commutative Laws</b></p>
+<pre>
+A + B = B + A
+A . B = B . A
+</pre>
+
+<p><b>4) Associative Laws</b></p>
+<pre>
+A + (B+C) = (A+B) + C
+A . (B.C) = (A.B) . C
+</pre>
+
+<p><b>5) Distributive Laws</b></p>
+<pre>
+A . (B+C) = A.B + A.C
+A + (B.C) = (A+B) . (A+C)
+</pre>
+
+<hr>
+
+<h3>2.2.5 Statement and Verification of Laws of Boolean Algebra Using Truth Table</h3>
+
+<p>Boolean laws can be verified by constructing a truth table for both sides of the equation, LHS and RHS, and checking whether the output columns are identical for every combination of inputs.</p>
+
+<p><font>Example: Verify A + A(complement) = 1</font></p>
+<table>
+<tr><th>A</th><th>A complement</th><th>A + A complement</th></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+</table>
+<p>Since the output is 1 in every row, the law is verified.</p>
+
+<p><font>Example: Verify Distributive Law A.(B+C) = A.B + A.C</font></p>
+<table>
+<tr><th>A</th><th>B</th><th>C</th><th>B+C</th><th>A.(B+C)</th><th>A.B</th><th>A.C</th><th>A.B + A.C</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+</table>
+<p>Since the columns A.(B+C) and A.B + A.C are identical for all 8 combinations, the Distributive Law is verified.</p>
+
+<p><font>Example: Verify Commutative Law for OR, A+B = B+A</font></p>
+<table>
+<tr><th>A</th><th>B</th><th>A+B</th><th>B+A</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+</table>
+<p>Both columns match in every row, so A+B = B+A is verified.</p>
+
+<hr>
+
+<h2>Summary</h2>
+<ul>
+<li>Computers use the binary number system internally, though decimal, octal and hexadecimal systems are also used for convenience and are inter convertible using division-remainder or multiplication methods, or direct grouping for binary to octal and hex</li>
+<li>Binary addition and subtraction follow simple bit wise rules. Subtraction can also be performed using 1's and 2's complement methods, which are important for computer hardware design</li>
+<li>Boolean algebra provides the mathematical basis for digital logic. Boolean values, truth tables, expressions and functions describe how digital systems make decisions</li>
+<li>The seven basic logic gates, AND, OR, NOT, NAND, NOR, XOR and XNOR, each perform a specific logical operation and can be combined to build any digital circuit</li>
+<li>The laws of Boolean algebra, complement, identity, commutative, associative and distributive, allow simplification of logic expressions and circuits, and can be proven true using truth tables</li>
+</ul>
+
+<h2>Exercise</h2>
+<ol>
+<li>Convert 156 (base 10) into binary, octal and hexadecimal</li>
+<li>Convert 11010111 (base 2) into decimal, octal and hexadecimal</li>
+<li>Add 11011 (base 2) and 1011 (base 2)</li>
+<li>Subtract 1001 (base 2) from 1100 (base 2) using the direct method, the 1's complement method and the 2's complement method</li>
+<li>Draw the truth table and logic symbol for the XOR and NAND gates</li>
+<li>State the Distributive Law of Boolean algebra and verify it using a truth table</li>
+<li>Differentiate between 1's complement and 2's complement methods of subtraction</li>
+</ol>
+
+</body>
 </html>
